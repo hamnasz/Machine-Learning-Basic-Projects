@@ -17,56 +17,6 @@ The primary code is likely in `main.ipynb`, a Jupyter notebook that loads the da
 ### Expected Results
 While exact results are unavailable, the model might achieve an R-squared value around 0.36, suggesting it explains about 36% of the variance in quality scores. This indicates moderate predictive power, with potential for improvement using advanced models.
 
-
-# Regression Project
-
-## Overview
-
-This project uses linear regression to predict the quality of red wine based on its physicochemical properties. The dataset used is the Wine Quality dataset from the UCI Machine Learning Repository.
-
-## Dataset
-
-The dataset contains 1599 samples of red wine with 11 features and a quality score ranging from 0 to 10. The features include:
-
-- fixed acidity
-- volatile acidity
-- citric acid
-- residual sugar
-- chlorides
-- free sulfur dioxide
-- total sulfur dioxide
-- density
-- pH
-- sulphates
-- alcohol
-
-The target variable is:
-
-- quality
-
-## Code
-
-The main code is contained in `main.ipynb`, which is a Jupyter notebook that performs the following steps:
-
-1. **Data Loading:** The dataset is loaded from the UCI repository.
-2. **Exploratory Data Analysis (EDA):** Visualizations are created to understand the distribution of the data and the relationships between features.
-3. **Data Splitting:** The dataset is split into training and testing sets.
-4. **Model Training:** A linear regression model is trained on the training set.
-5. **Model Evaluation:** The model's performance is evaluated on the testing set using metrics such as Mean Squared Error (MSE) and R-squared.
-6. **Visualization:** A scatter plot of actual vs. predicted quality scores is generated to visually assess the model's performance.
-
-## Results
-
-The linear regression model achieved an R-squared value of approximately 0.36 on the test set, indicating that the model explains about 36% of the variance in the wine quality scores. This suggests that while the model captures some relationship between the features and the quality, there is room for improvement, possibly by using more complex models or additional features.
-
-## Citations
-
-- [Wine Quality Dataset](https://archive.ics.uci.edu/ml/datasets/wine+quality)
-- [GitHub Repository](https://github.com/hamnasz/Regression-Project)
-
-
-This markdown file summarizes the repository’s content based on available information. You can view it on GitHub or use it for documentation.
-
 ---
 
 ### Comprehensive Report on the Regression Project Repository
