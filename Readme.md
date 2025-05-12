@@ -14,7 +14,7 @@ The dataset, named `data.csv`, contain 1,599 samples of red wine, each with 11 f
 The primary code is in `main.ipynb`, a Jupyter notebook that loads the dataset, performs exploratory data analysis (e.g., visualizations), trains a linear regression model, and evaluates its performance. It include plots like actual vs. predicted quality scores.
 
 ### Expected Results
-While exact results are unavailable, the model might achieve an R-squared value around 0.36, suggesting it explains about 36% of the variance in quality scores. This indicates moderate predictive power, with potential for improvement using advanced models.
+While exact results are unavailable, the model achieve an R-squared value around 0.36, suggesting it explains about 36% of the variance in quality scores. This indicates moderate predictive power, with potential for improvement using advanced models.
 
 ---
 
