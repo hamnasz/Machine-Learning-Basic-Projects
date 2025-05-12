@@ -5,13 +5,13 @@
 - The code involves data analysis, model training, and visualization.
 
 ### Project Overview
-The GitHub repository at [Regression-Project](https://github.com/hamnasz/Regression-Project) appears to be a machine learning project focused on predicting red wine quality using linear regression. It likely uses the Wine Quality dataset from the UCI Machine Learning Repository, which includes chemical properties of wines and their quality scores.
+The GitHub repository at [Regression-Project](https://github.com/hamnasz/Regression-Project) is a machine learning project focused on predicting red wine quality using linear regression. It likely uses the Wine Quality dataset from the UCI Machine Learning Repository, which includes chemical properties of wines and their quality scores.
 
 ### Dataset Description
-The dataset, probably named `data.csv`, seems to contain 1,599 samples of red wine, each with 11 features such as fixed acidity, volatile acidity, and alcohol content, plus a quality score (0–10). This data is commonly used for regression tasks to predict quality based on these features.
+The dataset, named `data.csv`, contain 1,599 samples of red wine, each with 11 features such as fixed acidity, volatile acidity, and alcohol content, plus a quality score (0–10). This data is commonly used for regression tasks to predict quality based on these features.
 
 ### Code Summary
-The primary code is likely in `main.ipynb`, a Jupyter notebook that loads the dataset, performs exploratory data analysis (e.g., visualizations), trains a linear regression model, and evaluates its performance. It may include plots like actual vs. predicted quality scores.
+The primary code is in `main.ipynb`, a Jupyter notebook that loads the dataset, performs exploratory data analysis (e.g., visualizations), trains a linear regression model, and evaluates its performance. It include plots like actual vs. predicted quality scores.
 
 ### Expected Results
 While exact results are unavailable, the model might achieve an R-squared value around 0.36, suggesting it explains about 36% of the variance in quality scores. This indicates moderate predictive power, with potential for improvement using advanced models.
