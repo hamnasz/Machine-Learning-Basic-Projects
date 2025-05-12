@@ -21,7 +21,7 @@ While exact results are unavailable, the model achieve an R-squared value around
 ### Comprehensive Report on the Regression Project Repository
 
 #### Introduction
-The GitHub repository hosted at [Regression-Project](https://github.com/hamnasz/Regression-Project) is likely a machine learning project centered on predicting the quality of red wine using linear regression. This report provides a detailed analysis of the repository’s contents, including its dataset, code, and potential results, based on inferred information from typical project structures and the provided context. The repository appears to leverage the Wine Quality dataset from the UCI Machine Learning Repository, a well-known resource for regression tasks.
+The GitHub repository hosted at [Regression-Project](https://github.com/hamnasz/Regression-Project) is a machine learning project centered on predicting the quality of red wine using linear regression. This report provides a detailed analysis of the repository’s contents, including its dataset, code, and potential results, based on inferred information from typical project structures and the provided context. The repository appears to leverage the Wine Quality dataset from the UCI Machine Learning Repository, a well-known resource for regression tasks.
 
 #### Repository Structure
 The repository likely contains the following key files, inferred from standard machine learning project conventions and partial information:
