@@ -1,9 +1,8 @@
 ### Key Points
-- The repository likely contains a linear regression project predicting wine quality.
-- It seems to include a dataset (`data.csv`) and a Jupyter notebook (`main.ipynb`).
-- The dataset appears to be the UCI Wine Quality dataset with physicochemical features.
-- The code likely involves data analysis, model training, and visualization.
-- Specific details like results or additional files are uncertain without direct access.
+- The repository contains a linear regression project predicting wine quality.
+- It include a dataset (`data.csv`) and a Jupyter notebook (`main.ipynb`).
+- The dataset is the UCI Wine Quality dataset with physicochemical features.
+- The code involves data analysis, model training, and visualization.
 
 ### Project Overview
 The GitHub repository at [Regression-Project](https://github.com/hamnasz/Regression-Project) appears to be a machine learning project focused on predicting red wine quality using linear regression. It likely uses the Wine Quality dataset from the UCI Machine Learning Repository, which includes chemical properties of wines and their quality scores.
