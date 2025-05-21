@@ -1,8 +1,8 @@
 {
   "name": "Ames House Price ML Dev Container",
-  "image": "mcr.microsoft.com/devcontainers/python:3.10",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12",
   "features": {},
-  "postCreateCommand": "pip install -r Regression/Project/requirements.txt",
+  "postCreateCommand": "pip install -r .devcontainer/requirements.txt",
   "customizations": {
     "vscode": {
       "settings": {},
