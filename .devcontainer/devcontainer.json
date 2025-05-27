@@ -1,6 +1,6 @@
 {
   "name": "Ames House Price ML Dev Container",
-  "image": "mcr.microsoft.com/devcontainers/python:3.12",
+  "image": "mcr.microsoft.com/devcontainers/python:3.13.3",
   "features": {},
   "postCreateCommand": "pip install -r .devcontainer/requirements.txt",
   "customizations": {
