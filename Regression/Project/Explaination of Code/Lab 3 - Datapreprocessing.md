@@ -6,7 +6,7 @@ Data preprocessing is a crucial step in any machine learning project. It involve
 
 ---
 
-## Code (from `forlabmanual.py`)
+## Code
 
 ```python
 train_data = pd.read_csv('Data/train.csv', index_col='Id')
