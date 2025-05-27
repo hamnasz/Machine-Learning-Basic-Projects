@@ -6,7 +6,7 @@ Logistic Regression is a supervised machine learning algorithm used for binary c
 
 ---
 
-## Code (from `forlabmanual.py`)
+## Code
 
 ```python
 from sklearn.impute import SimpleImputer
