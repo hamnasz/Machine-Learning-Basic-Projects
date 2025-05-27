@@ -7,3 +7,4 @@ xgboost
 lightgbm
 imblearn
 imbalanced-learn
+notebook
