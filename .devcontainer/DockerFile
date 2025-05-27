@@ -1,0 +1,30 @@
+# Use an official Debian base image
+FROM mcr.microsoft.com/devcontainers/base:debian
+
+# Install system dependencies for building Python
+RUN apt-get update && apt-get install -y \
+    wget build-essential libssl-dev zlib1g-dev \
+    libbz2-dev libreadline-dev libsqlite3-dev \
+    libncurses5-dev libgdbm-dev libnss3-dev \
+    libffi-dev curl liblzma-dev tk-dev \
+    git
+
+# Install Python 3.13.3
+RUN wget https://www.python.org/ftp/python/3.13.3/Python-3.13.3.tgz && \
+    tar -xf Python-3.13.3.tgz && \
+    cd Python-3.13.3 && \
+    ./configure --enable-optimizations && \
+    make -j$(nproc) && \
+    make altinstall && \
+    cd .. && \
+    rm -rf Python-3.13.3 Python-3.13.3.tgz
+
+# Set python3 to point to python3.13
+RUN ln -sf /usr/local/bin/python3.13 /usr/local/bin/python3 && \
+    ln -sf /usr/local/bin/pip3.13 /usr/local/bin/pip3
+
+# Install pipx (optional, for isolated Python tools)
+RUN python3 -m ensurepip && pip3 install --upgrade pip pipx
+
+# Set up a working directory
+WORKDIR /workspaces/${localWorkspaceFolderBasename}

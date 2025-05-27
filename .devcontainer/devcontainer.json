@@ -1,6 +1,8 @@
 {
   "name": "Ames House Price ML Dev Container",
-  "image": "mcr.microsoft.com/devcontainers/python:3.13.3",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
   "features": {},
   "postCreateCommand": "python3 -m venv .venv && . .venv/bin/activate && pip install --upgrade pip && pip install -r .devcontainer/requirements.txt",
   "customizations": {
