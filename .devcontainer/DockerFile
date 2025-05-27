@@ -15,6 +15,10 @@ RUN wget https://www.python.org/ftp/python/3.13.3/Python-3.13.3.tgz && \
     cd .. && \
     rm -rf Python-3.13.3 Python-3.13.3.tgz
 
+RUN wget https://bootstrap.pypa.io/get-pip.py && \
+    /usr/local/bin/python3.13 get-pip.py && \
+    rm get-pip.py
+
 RUN ln -sf /usr/local/bin/python3.13 /usr/local/bin/python3 && \
     ln -sf /usr/local/bin/pip3.13 /usr/local/bin/pip3
 
