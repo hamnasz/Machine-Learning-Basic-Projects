@@ -1,13 +1,11 @@
 FROM mcr.microsoft.com/devcontainers/base:ubuntu-22.04
 
-# Install dependencies for building Python
 RUN apt-get update && apt-get install -y \
     wget build-essential libssl-dev zlib1g-dev \
     libbz2-dev libreadline-dev libsqlite3-dev \
     libncurses5-dev libgdbm-dev libnss3-dev \
-    libffi-dev curl liblzma-dev tk-dev git
+    libffi-dev curl liblzma-dev tk-dev git cmake
 
-# Download and install Python 3.13.3
 RUN wget https://www.python.org/ftp/python/3.13.3/Python-3.13.3.tgz && \
     tar -xf Python-3.13.3.tgz && \
     cd Python-3.13.3 && \
@@ -17,18 +15,8 @@ RUN wget https://www.python.org/ftp/python/3.13.3/Python-3.13.3.tgz && \
     cd .. && \
     rm -rf Python-3.13.3 Python-3.13.3.tgz
 
-# Make python3 and pip3 point to Python 3.13
 RUN ln -sf /usr/local/bin/python3.13 /usr/local/bin/python3 && \
     ln -sf /usr/local/bin/pip3.13 /usr/local/bin/pip3
 
-# Set up default user (VS Code expects this)
-ARG USERNAME=vscode
-ARG USER_UID=1000
-ARG USER_GID=$USER_UID
-
-RUN groupadd --gid $USER_GID $USERNAME \
-    && useradd --uid $USER_UID --gid $USER_GID -m $USERNAME
-
-USER $USERNAME
-
+USER vscode
 WORKDIR /workspaces/${localWorkspaceFolderBasename}
