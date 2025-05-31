@@ -10,3 +10,5 @@ imbalanced-learn
 notebook
 plotly
 statsmodels
+keras
+tensorflow
