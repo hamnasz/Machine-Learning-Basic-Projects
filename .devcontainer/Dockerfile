@@ -1,26 +1,23 @@
-FROM mcr.microsoft.com/devcontainers/base:ubuntu-22.04
+FROM mcr.microsoft.com/devcontainers/python:3.13-jammy
 
-RUN apt-get update && apt-get install -y \
-    wget build-essential libssl-dev zlib1g-dev \
-    libbz2-dev libreadline-dev libsqlite3-dev \
-    libncurses5-dev libgdbm-dev libnss3-dev \
-    libffi-dev curl liblzma-dev tk-dev git cmake
+USER root
 
-RUN wget https://www.python.org/ftp/python/3.13.3/Python-3.13.3.tgz && \
-    tar -xf Python-3.13.3.tgz && \
-    cd Python-3.13.3 && \
-    ./configure --enable-optimizations && \
-    make -j$(nproc) && \
-    make altinstall && \
-    cd .. && \
-    rm -rf Python-3.13.3 Python-3.13.3.tgz
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+    build-essential \
+    cmake \
+    python3-dev \
+    libopenblas-dev \
+    liblapack-dev \
+    libx11-dev \
+    libgtk-3-dev \
+    curl \
+    git \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-RUN wget https://bootstrap.pypa.io/get-pip.py && \
-    /usr/local/bin/python3.13 get-pip.py && \
-    rm get-pip.py
-
-RUN ln -sf /usr/local/bin/python3.13 /usr/local/bin/python3 && \
-    ln -sf /usr/local/bin/pip3.13 /usr/local/bin/pip3
+RUN pip install --upgrade pip && \
+    pip install jupyterlab notebook ipykernel
 
 USER vscode
+
 WORKDIR /workspaces/${localWorkspaceFolderBasename}

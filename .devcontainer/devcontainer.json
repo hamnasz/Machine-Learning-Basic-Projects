@@ -4,7 +4,7 @@
     "dockerfile": "Dockerfile"
   },
   "features": {},
-  "postCreateCommand": "python3 -m venv .venv && . .venv/bin/activate && pip install --upgrade pip && pip install -r .devcontainer/requirements.txt",
+  "postCreateCommand": "sudo apt update && sudo apt install -y gcc python3-dev linux-headers-generic && python3 -m venv .venv && . .venv/bin/activate && pip install --upgrade pip && pip install -r requirements.txt && python -m ipykernel install --user --name=venv --display-name 'Python (venv)'",
   "customizations": {
     "vscode": {
       "settings": {
@@ -12,8 +12,14 @@
         "python.terminal.activateEnvironment": true
       },
       "extensions": [
-        "ms-python.python",
-        "ms-toolsai.jupyter"
+        "ms-azuretools.vscode-docker",
+        "ms-vscode-remote.remote-containers",
+        "ms-python.vscode-pylance",
+        "ms-toolsai.jupyter",
+        "ms-toolsai.jupyter-slideshow",
+        "ms-toolsai.jupyter-renderers",
+        "ms-vscode.powershell",
+        "ms-toolsai.datawrangler"
       ]
     }
   }
