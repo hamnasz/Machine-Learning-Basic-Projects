@@ -1,26 +1,23 @@
-{
-  "name": "Ames House Price ML Dev Container",
-  "build": {
-    "dockerfile": "Dockerfile"
-  },
-  "features": {},
-  "postCreateCommand": "apk update && apk add gcc musl-dev python3-dev linux-headers && python3 -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt && python -m ipykernel install --user --name=venv --display-name 'Python (venv)'",
-  "customizations": {
-    "vscode": {
-      "settings": {
-        "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
-        "python.terminal.activateEnvironment": true
-      },
-      "extensions": [
-        "ms-azuretools.vscode-docker",
-        "ms-vscode-remote.remote-containers",
-        "ms-python.vscode-pylance",
-        "ms-toolsai.jupyter",
-        "ms-toolsai.jupyter-slideshow",
-        "ms-toolsai.jupyter-renderers",
-        "ms-vscode.powershell",
-        "ms-toolsai.datawrangler"
-      ]
-    }
-  }
-}
+FROM mcr.microsoft.com/devcontainers/python:3.13-jammy
+
+USER root
+
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+    build-essential \
+    cmake \
+    python3-dev \
+    libopenblas-dev \
+    liblapack-dev \
+    libx11-dev \
+    libgtk-3-dev \
+    curl \
+    git \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
+
+RUN pip install --upgrade pip && \
+    pip install jupyterlab notebook ipykernel
+
+USER vscode
+
+WORKDIR /workspaces/${localWorkspaceFolderBasename}
