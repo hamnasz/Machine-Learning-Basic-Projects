@@ -12,3 +12,5 @@ plotly
 statsmodels
 keras
 tensorflow
+ipykernel
+jupyterlab
