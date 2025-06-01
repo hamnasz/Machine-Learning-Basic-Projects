@@ -4,7 +4,7 @@
     "dockerfile": "Dockerfile"
   },
   "features": {},
-  "postCreateCommand": "sudo apk update && sudo apk add gcc musl-dev python3-dev linux-headers && pip install -r requirements.txt && python -m ipykernel install --user --name=venv --display-name 'Python (venv)'",
+  "postCreateCommand": "sudo apt update && sudo apt install -y gcc python3-dev linux-headers-generic && python3 -m venv .venv && . .venv/bin/activate && pip install --upgrade pip && pip install -r requirements.txt && python -m ipykernel install --user --name=venv --display-name 'Python (venv)'",
   "customizations": {
     "vscode": {
       "settings": {
